@@ -1,0 +1,26 @@
+{
+  "name": "eb_project",
+  "version": "1.0.0",
+  "description": "eb local business site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HaydenMik33/eb_project-demo.git"
+  },
+  "author": "Hayden Rahn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HaydenMik33/eb_project-demo/issues"
+  },
+  "homepage": "https://github.com/HaydenMik33/eb_project-demo#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "mongoose": "^5.2.5",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0"
+  }
+}
