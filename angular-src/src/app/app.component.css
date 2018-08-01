@@ -1,0 +1,9 @@
+.main{
+    margin:4vw auto;
+    width:70%;
+}
+* {
+    box-sizing: border-box;
+  }
+  @media only screen and (max-width: 836px) {
+}
