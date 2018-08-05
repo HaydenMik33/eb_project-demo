@@ -7,7 +7,6 @@ import {map} from 'rxjs/operators';
 export class AuthService {
   authToken : any;
   user:any;
-
   constructor(private http:Http) { }
   registerUser(user){
     let headers = new Headers();
@@ -22,11 +21,12 @@ export class AuthService {
     .pipe(map(res=> res.json()))
   }
   storeUserData(token,user){
+       this.authToken = token;
+       this.user = user
+       console.log(this.authToken,this.user)
        localStorage.setItem('id_token',token);
        localStorage.setItem('user',JSON.stringify(user)); 
        //local storage only can store string
-       this.authToken = token;
-       this.user = user
   }
   logout(){
     this.authToken = null;
