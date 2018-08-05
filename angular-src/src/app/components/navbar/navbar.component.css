@@ -1,20 +1,28 @@
-.logo{
-    margin-left:20%;
-    display: inline-block;
+.logo {
+  margin-left: 20%;
+  display: inline-block;
 }
-.mynav{
-    margin-right: 20%;
+.mynav {
+  margin-right: 20%;
+  flex-direction: row;
+  display: flex;
 }
-@media only screen and (max-width: 836px) {
-    .logo {
-        margin-left:3%;
-    }
-    .mynav{
-        margin-right:3%;
-    }
+.mynav > a,div{
+    margin: 5px;
 }
-@media only screen and (max-width: 560px) {
-    .mynav{
-       display: none;
-    }
+.myAccountBtn{
+    border:none;
+}
+@media only screen and (max-width: 940px) {
+  .logo {
+    margin-left: 3%;
+  }
+  .mynav {
+    margin-right: 3%;
+  }
+}
+@media only screen and (max-width: 620px) {
+  .mynav {
+    display: none;
+  }
 }

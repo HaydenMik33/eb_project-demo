@@ -2,10 +2,23 @@
   <h1 class="mr-md-auto logo">EB project</h1>
   <nav class="mynav">
     <a class="p-2 text-dark" routerLink="/">Home</a>
-    <a class="p-2 text-dark" routerLink="/dashboard">Dashboard</a>
-    <a class="p-2 text-dark" routerLink="/profile">Profile</a>
-    <a class="p-2" routerLink="/login">Sign in</a>
-    <a class="p-2" (click)="onLogoutClick()" href="/login">Sign out</a>
-    <a class="btn btn-outline-primary" routerLink="/register">Sign up</a>
+
+
+    <div *ngIf="userExists; else noUserBlock" class="dropdown myDrop">
+      <button class="btn btn-secondary dropdown-toggle myAccountBtn" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">
+        my Account
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" routerLink="/dashboard">Dashboard</a>
+        <a class="dropdown-item" routerLink="/profile">Profile</a>
+
+        <a class="dropdown-item" (click)="onLogoutClick()" href="/login">Sign out</a>
+      </div>
+    </div>
+    <ng-template #noUserBlock>
+      <a class="p-2 text-dark" routerLink="/login">Sign in</a> 
+      <a class="btn btn-outline-primary" routerLink="/register">Sign up</a>
+    </ng-template>
   </nav>
 </div>
