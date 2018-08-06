@@ -1,0 +1,20 @@
+.fixedTop{
+    background-color:#dcedc8;
+    margin:0;
+    box-shadow: none;
+    height: 40px;
+}
+.hours{
+    margin-left:10vw
+}
+.myAccountBtn{
+    padding:4px;
+    box-shadow: none;
+}
+.myDrop{
+    position: relative;
+    left:15vw;
+}
+.signinup{
+    margin-right: 10vw;
+}

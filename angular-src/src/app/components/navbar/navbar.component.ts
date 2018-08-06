@@ -10,12 +10,10 @@ export class NavbarComponent implements OnInit{
   constructor(private aService: AuthService, private router: Router) {}
   ngOnInit() {
   }
-  onLogoutClick(){
-    this.aService.logout()
-  }
+ 
   // ngDoCheck() {
   //   if (this.user===undefined && this.aService.user) {
-  //     this.userExists = true;
+  //     this.userExists = true;kk
   //     this.user = this.aService.user;
   //   } 
   //   else if(this.user&& this.aService.user){
