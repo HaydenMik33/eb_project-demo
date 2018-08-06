@@ -1,0 +1,18 @@
+<div class="fixedTop navbar">
+  <div class="hours"> Hours: Mon - Thu: 8AM - 5PM, Fri: 6AM - 5PM</div>
+  <div *ngIf="aService.loggedIn()" class="dropdown myDrop">
+      <button class="btn btn-success dropdown-toggle myAccountBtn" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">
+        Account
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a *ngIf="aService.loggedIn()" class="dropdown-item" routerLink="/dashboard">Dashboard</a>
+        <a *ngIf="aService.loggedIn()" class="dropdown-item" routerLink="/profile">Profile</a>
+        <a *ngIf="aService.loggedIn()" class="dropdown-item" (click)="onLogoutClick()" href="/login">Sign out</a>
+      </div>
+    </div>
+    <div class="signinup">
+        <a *ngIf="!aService.loggedIn()" class="p-2 text-dark" routerLink="/login">Sign in</a> 
+        <a *ngIf="!aService.loggedIn()" class="p-2 text-blue" routerLink="/register">Sign up</a>
+      </div>
+</div>
