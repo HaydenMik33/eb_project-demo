@@ -26,7 +26,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 require('./config/passport')(passport)
 // Set Static Folder
-app.use(express.static(path.join(__dirname, 'client')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.use('/users', users);
@@ -34,7 +34,11 @@ app.get('/', (req, res) => {
     res.send('Invalid Endpoint');
 });
 
-const port = 3000;
+app.get('*',(req,res)=>{
+res.sendfile(path.join(__dirname,'public/index.html'))
+})
+
+const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log('Server started on port '+port);
 });
