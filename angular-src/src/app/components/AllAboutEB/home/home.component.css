@@ -1,0 +1,17 @@
+.header{
+    background-image: url(../../../../assets/images/main_header.jpg);
+   background-size: cover;
+   color:white
+}
+
+.textarea{
+    width:70%;
+    margin:0 auto;
+    padding:20% 0;
+}
+.textarea h2{
+    font-weight: lighter;
+}
+.textarea h1{
+    font-size: 36px;
+}
