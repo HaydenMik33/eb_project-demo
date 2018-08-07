@@ -6,7 +6,8 @@ const passport = require('passport');
 const mongoose = require('mongoose');
 const config = require('./config/database');
 const users = require('./routes/users');
-
+const items = require('./routes/items')
+const orders = require('./routes/orders')
 mongoose.connect(config.database).then(()=>{
     
 }).catch(console.error)
@@ -28,8 +29,9 @@ require('./config/passport')(passport)
 // Set Static Folder
 app.use(express.static(path.join(__dirname, 'public')));
 
-
+app.use('/items',items)
 app.use('/users', users);
+app.use('/orders',orders)
 app.get('/', (req, res) => {
     res.send('Invalid Endpoint');
 });
