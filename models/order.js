@@ -1,29 +1,28 @@
 const mongoose = require("mongoose");
 const config = require("../config/database");
-const {Schema} = mongoose;
-const OrderSchema =new Schema({
+const { Schema } = mongoose;
+const OrderSchema = new Schema({
   total: {
     type: Number,
     required: true
   },
-  user : {
+  user: {
     type: Schema.Types.ObjectId,
-    ref: 'User'
+    ref: "User",
+    required: true
   },
   items: {
     type: [Schema.Types.ObjectId],
-    ref:'Item'
+    ref: "Item"
   }
 });
 
-const Order = module.exports = mongoose.model("Order", OrderSchema)
+const Order = (module.exports = mongoose.model("Order", OrderSchema));
 
-module.exports.getOrdersByUser = (userId,callback) => {
-    Order.find(userId,callback)
+module.exports.getOrdersByUser = (userId, callback) => {
+  Order.find(userId, callback);
 };
-// module.exports.getUserByUsername = (username, cb) => {
 
-// };
-// module.exports.addUser = function(newUser, callback){
-
-// }
+module.exports.addNewOrder = function(newOrder, callback) {
+  newOrder.save(callback);
+};
