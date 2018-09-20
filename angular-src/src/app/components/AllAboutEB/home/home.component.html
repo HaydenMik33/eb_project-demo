@@ -1,35 +1,72 @@
 <div class="home">
   <div class="header">
     <div class="textarea">
-      <h1>Welcome to eb</h1>
-      <h2>While massage is a great way to keep your body operating at peak efficiency, wellness is much more than muscle relaxation.
-        Complementary therapies and at-home care make a Massage Envy Membership a total body care resource.
-      </h2>
+      <h1>Enzyme Bath
+      </h1>
+      Innovative health care
+      <p>
+        A detox treatment that originated in Japan brought to the U.S.,causing a heating sensation releasing toxins and
+        improving circulation.
+      </p>
       <button type="button" class="btn btn-primary">make an appointment</button>
     </div>
   </div>
-  <section>
+  <section class="s1">
     <h1>
-      section heading
+      EB Care Services
     </h1>
-    <article>section article</article>
+    <hr/> 
+    <hr/> 
+    <div class="s1_main">
+    <article>
+     <h2>CEDAR ENZYME BATH</h2>
+     <p>Rejuvenate in the healing alchemy of the Cedar Enzyme Bath, a therapeutic body treatment from Japan found nowhere else on this continent. Our signature treatment offers a myriad of health benefits.</p>
+    </article>
+    <article>
+     <h2>THE ZEN GARDEN</h2>
+     <p>Our secluded five acres of creek side property is extensively landscaped with five distinct Japanese garden areas. We encourage our guests to enjoy our landmark Meditation Garden and accompanying resting areas.</p>
+    </article>
+    <article>
+     <h2>MAKE GROUP SPA RESERVATIONS</h2>
+     <p>We believe that bringing people together is one of the best paths toward transformation and making deeper connections. Allow us to create an unforgettable day of rejuvenation and togetherness tailored just for you.</p>
+    </article>
+  </div>
   </section>
-  <section>
+  <div class="s2_bg">
+  <section class="s2">
     <h1>
-      section heading
+      Working Hours
     </h1>
-    <article>section article</article>
+    <img alt="leaf" src="../../../../assets/images/leaf.png" 
+    class="leaf" width="80">
+    <article>
+      <p>The basic spa treatments are massage, facial, body treatment, manicure, and pedicure. … Most spas offer
+        manicures and pedicures as well. You can also combine services—a massage and a body treatment is a good
+        combina-tion</p>
+      <ul>
+        <li>Mon – Fri : 8:00am – 04:00pm</li>
+        <li>Sat : 8:00am – 11:00am</li>
+        <li>Sunday : Close</li>
+      </ul>
+      <button type="button" class="btn btn-success">Contact Us</button>
+    </article>
   </section>
-  <section>
+  </div>
+  <div class="s3_bg">
+  <section class="s3">
     <h1>
-      section heading
+      Location
     </h1>
-    <article>section article</article>
+    <p>
+        2640 Old Denton Rd<br/> Carrollton<br/> TX 75006
+    </p>
+    <article>
+        <agm-map [latitude]="lat" [longitude]="lng" (mapClick)="onChoseLocation($event)" >
+            <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+          </agm-map>
+    </article>
   </section>
-  <section>
-    <h1>
-      section heading
-    </h1>
-    <article>section article</article>
-  </section>
+  </div>
+  
+ 
 </div>

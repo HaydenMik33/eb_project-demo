@@ -3,7 +3,7 @@ import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { HttpModule } from "@angular/http";
 import { RouterModule, Routes } from "@angular/router";
-
+import { AgmCoreModule } from '@agm/core';
 import { AppComponent } from "./app.component";
 import { NavbarComponent } from "./components/smallC/navbar/navbar.component";
 import { LoginComponent } from "./components/auth/login/login.component";
@@ -66,7 +66,8 @@ const schedulingRoutes : Routes =[
     HttpModule,
     RouterModule.forRoot(appRoutes),
     RouterModule.forRoot(schedulingRoutes),
-    FlashMessagesModule.forRoot()
+    FlashMessagesModule.forRoot(),
+    AgmCoreModule.forRoot({apiKey:'AIzaSyCa6ZD0ZytmI5V5etaHLk1Ve7m9SNGB27c'})
   ],
   providers: [ValidateService, AuthService,AuthGuard,DataService],
   bootstrap: [AppComponent]

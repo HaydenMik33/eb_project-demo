@@ -15,10 +15,42 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style type="text/css">
+  .LoadingBox{
+   position: absolute;
+   top:45vh;
+   left:48vw;
+  }
+  .circle{position: relative; 	
+    width: 20px;
+	height: 20px;
+	background-color: #8BC34A;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;}
+  .c1{top:-25px; left:-50px; animation: move1 1s ease-in-out;}
+  .c2{top:25px ; left:50px; animation: move2 1s ease-in-out;}
+  @keyframes move1 {
+    0% {left: -50px;}
+    30% {left:50px;}
+    80%{ left: -50px}
+}
+  @keyframes move2 {
+    0%{left: 50px;}
+    30%{left: -50px;}
+    80%{left:50px;}
+}
+  </style>
 </head>
 
 <body>
-  <app-root>Loading...</app-root>
+  <app-root>
+    <div class="LoadingBox">
+      <div class="circle c1"></div>
+      <div class="circle c2"></div>
+    </div>
+  </app-root>
+
 </body>
 
 </html>
